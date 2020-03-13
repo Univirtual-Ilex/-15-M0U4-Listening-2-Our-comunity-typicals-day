@@ -24,6 +24,7 @@ const Container = styled(Container_base)`
     justify-content: center;
     align-items:center;
     height:100%;
+    overflow-y: auto;
 
     .viewport{
         box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.15);

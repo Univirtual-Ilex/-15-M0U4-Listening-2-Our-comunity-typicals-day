@@ -1,9 +1,9 @@
 //Import
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import styled from 'styled-components'
 import styles from './Actividad2B_styles'
 import Ilex from '../../App/variables'
-import ProgressBar from '../ProgressBar'
+import ButtonAudio from '../ButtonAudio'
 // styles from styled
 import { UiButtonsContainer } from '../Actividad1/Actividad_styles'
 // Data
@@ -30,6 +30,27 @@ import Area from '../AreaDrop'
 const Actividad2B_base = ({staticContext, ...props}) => {
 
     const DataPerson = Data[2] // this is the first screen and the first person
+
+    const ilxAudio0 = useRef()
+    const ilxAudio1 = useRef()
+    const ilxAudio2 = useRef()
+    const ilxAudio3 = useRef()
+    const [running0, playAudio0] = useState(false)
+    const [running1, playAudio1] = useState(false)
+    const [running2, playAudio2] = useState(false)
+    const [running3, playAudio3] = useState(false)
+
+    const aPlay = (i) => {
+
+        if(!eval('running' + i)) {
+            eval('ilxAudio' + i).current.play()
+            eval('playAudio' + i)(true)
+        } else {
+            eval('ilxAudio' + i).current.pause()
+            eval('playAudio' + i)(false)
+        }
+
+    }
 
     const w_c = 100 / DataPerson.audios.length
     const changeData = () => {
@@ -65,7 +86,14 @@ const Actividad2B_base = ({staticContext, ...props}) => {
     const questions = DataPerson.audios.map((data,i) => {
         return(
             <ICol w={w_c} key={i} >
-                <AreaButtons audio={data.audio} align={'left'} text={data.audio_text}/>
+                <IRow>
+                    <ButtonAudio src={data.audio} className={"btn-audio "  + (eval('running' + i) ? 'running' + i: '')}></ButtonAudio>
+                        <div className="btn-audio-text" onClick={() => aPlay(i)}>{data.audio_text}</div>
+                        <audio ref={eval('ilxAudio' + i)}>
+                        <source src={ data.audio }/>
+                       <span>No se puede reproducir el audio</span>
+                        </audio>
+                </IRow>
                 {
                     data.buttons.map((button, index) => {
                         return(
@@ -77,9 +105,9 @@ const Actividad2B_base = ({staticContext, ...props}) => {
         )
     })
     return (
-        <Container bgImage='./src/bg_actividad1.png' h={46} w={80} {...props}>
+        <Container bgImage='./src/bg_actividad1.png' h={38} w={80} {...props}>
             <UiButtonsContainer>
-                <ButtonUi icon='ilx-ayuda' tooltip='From the previous activity responds' />
+                <ButtonUi icon='ilx-ayuda' tooltip='Assign the activities of each student to the corresponding schedule' />
                 <ButtonUi icon='ilx-volver' tooltip='Start Again' onClick={ () => {window.location.href = '/actividad1'} } />
             </UiButtonsContainer>           
             <IRow w={85} align="center">
@@ -89,18 +117,22 @@ const Actividad2B_base = ({staticContext, ...props}) => {
                     </MainTitle>  
                 </ICol>
             </IRow>
-            <IRow pt={2} w={85} justify={'center'} className="columns" align={'center'} className="questions">
-                <ICol w={28} >
-                    <Area className={"persona1"} title={Data[2].name}/>
+            <IRow pt={2} w={85} justify={'center'}  align={'center'} className="questions">
+                <ICol w={25} >
+                    <IRow>
+                        <div className="title">ILEX ASSISTANT</div>
+                        <div className="assitant"></div>
+                        <AreaButtons className="audio" audio={DataPerson.audio_general}/>
+                    </IRow>          
                 </ICol>
-                <ICol w={60} pt={3} >
+                <ICol w={70} pt={3} className="columns">
                     <IRow>
                         {questions}
                     </IRow>
                 </ICol>
             </IRow>
-             <IRow pt={19}>
-                <ICol  ><ButtonCheck className="next" link={'/actividad2c'} text={'NEXT'} /></ICol>
+             <IRow pt={9.5}>
+             <ICol><a href="/actividad2c"> <ButtonCheck  text={'CHECK'} /></a></ICol>
             </IRow>
         </Container>
 

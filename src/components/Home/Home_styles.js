@@ -8,6 +8,7 @@ const estilos_home = css`
         font-size: 3.2em;
         font-weight: bold;
         line-height:0.95;
+        margin-top: -1em;
     }
 
     .bloque-izquierdo,.bloque-derecho{
@@ -41,6 +42,8 @@ const estilos_home = css`
             display:block;
             width:22.5em;
             height: auto;
+            margin-top: -9em;
+            transform: scale(0.75) translate(-2em, -3em);
         }
 
     }

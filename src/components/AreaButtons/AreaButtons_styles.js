@@ -5,7 +5,7 @@ const styles = css`
 .area-buttons{
     text-align: right;
     position: relative;
-    left:0em;
+    left:-3em;
     top:-1.5em;
     .button{
         display:inline-block;
@@ -18,7 +18,7 @@ const styles = css`
         cursor: pointer;
         &.sound{
             &:hover{
-                background-position:0 -45px;   
+                background-position:0 -45px;  
             }
         }
         &.text{

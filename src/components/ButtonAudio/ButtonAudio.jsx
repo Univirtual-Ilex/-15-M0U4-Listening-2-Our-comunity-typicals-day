@@ -6,7 +6,7 @@ import styles,{buttonAudio2} from './ButtonAudio_styles'
 //
 
 // Componente base
-const ButtonAudio_base = ({src, w, h, p, py, px, pl, pt, pr, pb, ml, mt, mr, mb, my, mx, ...props}) => {
+const ButtonAudio_base = ({src, play, w, h, p, py, px, pl, pt, pr, pb, ml, mt, mr, mb, my, mx, ...props}) => {
     const ilxAudio = useRef()
     const [running, playAudio] = useState(false)
     const aPlay = () => {
@@ -22,8 +22,8 @@ const ButtonAudio_base = ({src, w, h, p, py, px, pl, pt, pr, pb, ml, mt, mr, mb,
     }
     return (
         <div {...props}>
-            <button className={'btn-clean ' + (running ? 'running' : '')} onClick={ aPlay }>
-                { props.children ? props.children : <img className="img-play" src={running ? "./src/pause_btn.svg" : "./src/play_btn.svg"  } alt="Play Audio" /> }
+            <button className={'btn-clean ' + (running ? 'running' : '')}  onClick={ aPlay }>
+                { props.children ? props.children : <i className='ilx-bocina'></i>  }
             </button>
             <audio ref={ilxAudio}>
                 <source src={ src }/>

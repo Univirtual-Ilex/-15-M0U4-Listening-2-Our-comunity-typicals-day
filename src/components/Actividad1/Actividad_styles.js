@@ -10,9 +10,27 @@ const mistyles = css`
 }
 .pestanaBottom{
     position:absolute;
-    bottom:-1em;
+    bottom:-1.3em;
+}
+.tooltips{
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+.tooltip{
+    margin-top: 1em;
+}
+.name{
+    color: ${Ilex.violeta2};
+    font-weight: bold;
+    height: 50px;
+    margin-top: 2em;
 
 }
+.person-container{
+    width: 200px;
+}
+
 
 `
 
@@ -37,7 +55,6 @@ export const AreasContainer = styled(DraggablesContainer)`
     align-items: center ;
     position: relative;
     &.zoom-mini{
-
         .Tooltip{
 
             h3{
