@@ -17,7 +17,7 @@ const Home_base = function ({ staticContext, ...props}) { // se le pasan las pro
                             <p>
                             Listen to the information from each person’s typical day. Select the correct option from the clocks.
                             <span className='negrilla'> <br/> <br/> Time to practice your listening skill!</span></p>
-                            <ButtonLink to='/actividad1'>Start</ButtonLink>
+                            <ButtonLink className="start" to='/actividad1'>Start</ButtonLink>
                         </div>
                     </div>
                     <div className='bloque-derecho'>
