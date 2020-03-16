@@ -65,10 +65,12 @@ const Actividad2D_base = ({staticContext, ...props}) => {
             if(audio.right == 1){
                 count ++
             }else{
+                setErr(true)
                 DataPerson.right = 0
             }
             if(count === DataPerson.audios.length){
                 DataPerson.right = 1
+                setOk(true)
             }
         })
     }
@@ -89,21 +91,16 @@ const Actividad2D_base = ({staticContext, ...props}) => {
     }
 
     const checkActivity = () => {
-        var count = 0
-        Data.map((data, i) => {
-            if(data.right === 1){
-                count ++
-            }else{
-                setErr(true)
-                setModal(true)
-            }
-
-            if(count === Data.length){
-                setOk(true)
-                setModal(true)
-            }
-        })
+        if(DataPerson.right !== 1){
+            setErr(true)
+            setOk(false)
+        }else{
+            setErr(false)
+            setOk(true)
+        }
+        setModal(true)
     }
+
     const questions = DataPerson.audios.map((data,i) => {
         return(
             <ICol w={w_c} key={i} >
@@ -153,10 +150,10 @@ const Actividad2D_base = ({staticContext, ...props}) => {
                 </ICol>
             </IRow>
              <IRow pt={10}>
-                <ICol><ButtonCheck className="next" onClick={checkActivity} text={'NEXT'} /></ICol>
+                <ICol><ButtonCheck onClick={checkActivity}  text={'CHECK'} /></ICol>
             </IRow>
 
-            <Modal visible={modalFlag} ok={ok} err={err} w={25} repeatUrl={'/actividad1'} finished={ok} />
+            <Modal visible={modalFlag} ok={ok} err={err} w={25} repeatUrl={'/actividad2d'} finished={ok} />
         </Container>
 
     )

@@ -25,9 +25,15 @@ import AreaButtons from '../AreaButtons'
 
 
 import Area from '../AreaDrop'
-
+import Modal from '../Generales/Modal'
 
 const Actividad2B_base = ({staticContext, ...props}) => {
+
+
+    const [modalFlag, setModal] = useState(false)
+    const [ok, setOk] = useState(false)
+    const [err, setErr] = useState(false)
+
 
     const DataPerson = Data[2] // this is the first screen and the first person
 
@@ -59,10 +65,12 @@ const Actividad2B_base = ({staticContext, ...props}) => {
             if(audio.right == 1){
                 count ++
             }else{
+                setErr(true)
                 DataPerson.right = 0
             }
             if(count === DataPerson.audios.length){
                 DataPerson.right = 1
+                setOk(true)
             }
         })
     }
@@ -80,6 +88,17 @@ const Actividad2B_base = ({staticContext, ...props}) => {
         }
 
         changeData()
+    }
+
+    const checkActivity = () => {
+        if(DataPerson.right !== 1){
+            setErr(true)
+            setOk(false)
+        }else{
+            setErr(false)
+            setOk(true)
+        }
+        setModal(true)
     }
 
 
@@ -132,7 +151,8 @@ const Actividad2B_base = ({staticContext, ...props}) => {
                 </ICol>
             </IRow>
              <IRow pt={9.5}>
-             <ICol><a href="/actividad2c"> <ButtonCheck  text={'CHECK'} /></a></ICol>
+             <Modal visible={modalFlag} ok={ok} err={err} w={25} repeatUrl={'/actividad2b'} nxtUrl={'/actividad2c'} />
+             <ICol><ButtonCheck onClick={checkActivity}  text={'CHECK'} /></ICol>
             </IRow>
         </Container>
 

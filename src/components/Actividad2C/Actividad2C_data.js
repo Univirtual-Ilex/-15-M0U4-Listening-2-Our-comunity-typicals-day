@@ -1,29 +1,31 @@
 const data = [
-    {
-      "id": 1,
-      "name": "UTP MEDICINE STUDENT",
-      "text": "How many apps can you get for free?",
+    
+      {
+      "id": 6,
+      "name": "LANGUAGE TEACHER",
+      "text": "How many categories are there in Headspace?",
+      "status": 0,
       "right": 0,
       "audio_general": './media/audio.mp3',
       "audios": [
         {
           "audio": './media/audio.mp3',
-          "audio_text": '5:00 a.m.',
+          "audio_text": '7:15 a.m.',
           "buttons": [
             {
-              "text": "I have a shower,",
+              "text": "I always drive to work.",
+              "score": 1
+            },
+            {
+              "text": "I wake up.",
               "score": 0
             },
             {
-              "text": "I get dressed.",
+              "text": "I take a shower.",
               "score": 0
             },
             {
               "text": "I have breakfast.",
-              "score": 1
-            },
-            {
-              "text": "I wake up.",
               "score": 0
             }
           ],
@@ -31,45 +33,45 @@ const data = [
         },
         {
           "audio": './media/audio.mp3',
-          "audio_text": '5:20 a.m.',
+          "audio_text": '7:45 a.m.',
           "buttons": [
             {
               "text": "I wake up.",
               "score": 0
             },
             {
-              "text": "I have a shower and get dressed.",
+              "text": "I have a shower.",
               "score": 0
             },
             {
-              "text": "I take the bus.",
-              "score": 0
+              "text": "I arrive to the UTP.",
+              "score": 1 
             },
-            {
-              "text": "I normally have breakfast.",
-              "score": 1
-            }
-          ],
-          "right": 0
-        },
-        {
-          "audio": './media/audio.mp3',
-          "audio_text": '1:10 p.m.',
-          "buttons": [
             {
               "text": "I start classes.",
               "score": 0
-            },
+            }
+          ],
+          "right": 0
+        },
+        {
+          "audio": './media/audio.mp3',
+          "audio_text": '8:00 p.m.',
+          "buttons": [
             {
-              "text": "I arrive to work.",
-              "score": 0
-            },
-            {
-              "text": "I take the bus to go to the hospital St. Jorge to have my practical class.",
+              "text": "I arrive home.",
               "score": 1
             },
             {
-              "text": "I have lunch.",
+              "text": "I have dinner.",
+              "score": 0
+            },
+            {
+              "text": "I finish class.",
+              "score": 0
+            },
+            {
+              "text": "I drive home.",
               "score": 0
             }
           ],
@@ -77,7 +79,6 @@ const data = [
         },
       ],
     },
-  ]
-
+]
 
 export default data

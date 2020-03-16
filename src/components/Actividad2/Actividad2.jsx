@@ -25,9 +25,16 @@ import AreaButtons from '../AreaButtons'
 
 
 import Area from '../AreaDrop'
-
+import Modal from '../Generales/Modal'
 
 const Actividad2_base = ({staticContext, ...props}) => {
+
+
+    const [modalFlag, setModal] = useState(false)
+    const [ok, setOk] = useState(false)
+    const [err, setErr] = useState(false)
+
+
 
     const DataPerson = Data[0] // this is the first screen and the first person
     const ilxAudio0 = useRef()
@@ -52,22 +59,24 @@ const Actividad2_base = ({staticContext, ...props}) => {
     }
 
 
+    const w_c = 100 / DataPerson.audios.length
     const changeData = () => {
         var count = 0
         DataPerson.audios.forEach((audio) => {
             if(audio.right == 1){
                 count ++
             }else{
+                setErr(true)
                 DataPerson.right = 0
             }
             if(count === DataPerson.audios.length){
                 DataPerson.right = 1
+                setOk(true)
             }
         })
     }
 
 
-    const w_c = 100 / DataPerson.audios.length
     const setChecked = (audioId, buttonId) => {
         const data = DataPerson.audios[audioId]
         
@@ -80,6 +89,17 @@ const Actividad2_base = ({staticContext, ...props}) => {
         }
 
         changeData()
+    }
+
+    const checkActivity = () => {
+        if(DataPerson.right !== 1){
+            setErr(true)
+            setOk(false)
+        }else{
+            setErr(false)
+            setOk(true)
+        }
+        setModal(true)
     }
 
 
@@ -131,8 +151,9 @@ const Actividad2_base = ({staticContext, ...props}) => {
                     </IRow>
                 </ICol>
             </IRow>
+            <Modal visible={modalFlag} ok={ok} err={err} w={25} repeatUrl={'/actividad2'} nxtUrl={'/actividad2a'} />
              <IRow pt={9.8}>
-                <ICol><a href="/actividad2a"> <ButtonCheck  text={'CHECK'} /></a></ICol>
+                <ICol><ButtonCheck onClick={checkActivity}  text={'CHECK'} /></ICol>
             </IRow>
         </Container>
 
