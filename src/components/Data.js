@@ -4,10 +4,10 @@ const data = [
       "name": "UTP MEDICINE STUDENT",
       "text": "How many apps can you get for free?",
       "right": 0,
-      "audio_general": './media/audio.mp3',
+      "audio_general": './media/utp-medicine-student.mp3',
       "audios": [
         {
-          "audio": './media/audio.mp3',
+          "audio": './media/5-00-am.mp3',
           "audio_text": '5:00 a.m.',
           "buttons": [
             {
@@ -30,7 +30,7 @@ const data = [
           "right": 0
         },
         {
-          "audio": './media/audio.mp3',
+          "audio": './media/5-20-am.mp3',
           "audio_text": '5:20 a.m.',
           "buttons": [
             {
@@ -53,7 +53,7 @@ const data = [
           "right": 0
         },
         {
-          "audio": './media/audio.mp3',
+          "audio": './media/1-10-pm.mp3',
           "audio_text": '1:10 p.m.',
           "buttons": [
             {
@@ -83,10 +83,10 @@ const data = [
       "text": "How much is the SKRWT app?",
       "status": 0,
       "right": 0,
-      "audio_general": './media/audio.mp3',
+      "audio_general": './media/secretary.mp3',
       "audios": [
         {
-          "audio": './media/audio.mp3',
+          "audio": './media/6-30-am.mp3',
           "audio_text": '6:30 a.m.',
           "buttons": [
             {
@@ -109,7 +109,7 @@ const data = [
           "right": 0
         },
         {
-          "audio": './media/audio.mp3',
+          "audio": './media/5-30-am.mp3',
           "audio_text": '5:30 a.m.',
           "buttons": [
             {
@@ -132,7 +132,7 @@ const data = [
           "right": 0
         },
         {
-          "audio": './media/audio.mp3',
+          "audio": './media/2-40-pm.mp3',
           "audio_text": '2:40 p.m.',
           "buttons": [
             {
@@ -155,7 +155,7 @@ const data = [
           "right": 0
         },
         {
-          "audio": './media/audio.mp3',
+          "audio": './media/6-45-pm.mp3',
           "audio_text": '6:45 p.m.',
           "buttons": [
             {
@@ -185,10 +185,10 @@ const data = [
       "text": "How many days can you use Poweramp for free?",
       "status": 0,
       "right": 0,
-      "audio_general": './media/audio.mp3',
+      "audio_general": './media/ilex-assistant.mp3',
       "audios": [
         {
-          "audio": './media/audio.mp3',
+          "audio": './media/1-15-pm.mp3',
           "audio_text": '1:15 p.m.',
           "buttons": [
             {
@@ -211,7 +211,7 @@ const data = [
           "right": 0
         },
         {
-          "audio": './media/audio.mp3',
+          "audio": './media/2-00-pm.mp3',
           "audio_text": '2:00 p.m.',
           "buttons": [
             {
@@ -234,7 +234,7 @@ const data = [
           "right": 0
         },
         {
-          "audio": './media/audio.mp3',
+          "audio": './media/11-pm.mp3',
           "audio_text": '11:00 p.m.',
           "buttons": [
             {
@@ -264,10 +264,10 @@ const data = [
       "text": "How many categories are there in Headspace?",
       "status": 0,
       "right": 0,
-      "audio_general": './media/audio.mp3',
+      "audio_general": './media/language-teacher.mp3',
       "audios": [
         {
-          "audio": './media/audio.mp3',
+          "audio": './media/7-15-am.mp3',
           "audio_text": '7:15 a.m.',
           "buttons": [
             {
@@ -290,7 +290,7 @@ const data = [
           "right": 0
         },
         {
-          "audio": './media/audio.mp3',
+          "audio": './media/7-45-am.mp3',
           "audio_text": '7:45 a.m.',
           "buttons": [
             {
@@ -313,7 +313,7 @@ const data = [
           "right": 0
         },
         {
-          "audio": './media/audio.mp3',
+          "audio": './media/8-pm.mp3',
           "audio_text": '8:00 p.m.',
           "buttons": [
             {
@@ -343,10 +343,10 @@ const data = [
       "text": "How much is Poweramp after the free trial?",
       "status": 0,
       "right": 0,
-      "audio_general": './media/audio.mp3',
+      "audio_general": './media/industrial-engineering.mp3',
       "audios": [
         {
-          "audio": './media/audio.mp3',
+          "audio": './media/9-40-am.mp3',
           "audio_text": '9:40 a.m.',
           "buttons": [
             {
@@ -369,7 +369,7 @@ const data = [
           "right": 0
         },
         {
-          "audio": './media/audio.mp3',
+          "audio": './media/2-pm.mp3',
           "audio_text": '2:00 p.m.',
           "buttons": [
             {

@@ -4,7 +4,7 @@ const data = [
       "name": "UTP MEDICINE STUDENT",
       "text": "How many apps can you get for free?",
       "right": 0,
-      "audio_general": './media/audio.mp3',
+      "audio_general": './media/5-00-am.mp3',
       "audios": [
         {
           "audio": './media/audio.mp3',

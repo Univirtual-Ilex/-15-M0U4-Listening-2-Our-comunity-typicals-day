@@ -1,13 +1,13 @@
 const data = [
     {
       "id": 1,
-      "name": "UTP MEDICINE STUDENT"
+      "name": "UTP MEDICINE STUDENT",
       "text": "How many apps can you get for free?",
       "right": 0,
-      "audio_general": './media/audio.mp3',
+      "audio_general": './media/utp-medicine-student.mp3',
       "audios": [
         {
-          "audio": './media/audio.mp3',
+          "audio": './media/utp-medicine-student.mp3',
           "buttons": [
             {
               "text": "I have a shower,",
@@ -76,11 +76,11 @@ const data = [
     },
     {
       "id": 2,
-      "name": "UTP’S SECRETARY"
+      "name": "UTP’S SECRETARY",
       "text": "How much is the SKRWT app?",
       "status": 0,
       "right": 0,
-      "audio_general": './media/audio.mp3',
+      "audio_general": './media/utp-medicine-student.mp3',
       "audios": [
         {
           "audio": './media/audio.mp3',
@@ -174,7 +174,7 @@ const data = [
     },
     {
       "id": 3,
-      "name": "ILEX ASSISTANT"
+      "name": "ILEX ASSISTANT",
       "text": "How many days can you use Poweramp for free?",
       "status": 0,
       "right": 0,
@@ -250,7 +250,7 @@ const data = [
     },
     {
       "id": 6,
-      "name": "LANGUAGE TEACHER"
+      "name": "LANGUAGE TEACHER",
       "text": "How many categories are there in Headspace?",
       "status": 0,
       "right": 0,
@@ -326,7 +326,7 @@ const data = [
     },
     {
       "id": 4,
-      "name": "UTP INDUSTRIAL ENGINEERING STUDENT"
+      "name": "UTP INDUSTRIAL ENGINEERING STUDENT",
       "text": "How much is Poweramp after the free trial?",
       "status": 0,
       "right": 0,
