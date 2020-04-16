@@ -127,7 +127,7 @@ const Actividad2B_base = ({staticContext, ...props}) => {
         <Container bgImage='./src/bg_actividad1.png' h={38} w={80} {...props}>
             <UiButtonsContainer>
                 <ButtonUi icon='ilx-ayuda' tooltip='Assign the activities of each student to the corresponding schedule' />
-                <ButtonUi icon='ilx-volver' tooltip='Start Again' onClick={ () => {window.location.href = '/actividad1'} } />
+                <ButtonUi icon='ilx-volver' tooltip='Start Again' onClick={ () => {window.location.reload()} } />
             </UiButtonsContainer>           
             <IRow w={85} align="center">
                 <ICol pt={ 4 } pb={0.5}>
@@ -151,7 +151,7 @@ const Actividad2B_base = ({staticContext, ...props}) => {
                 </ICol>
             </IRow>
              <IRow pt={9.5}>
-             <Modal visible={modalFlag} ok={ok} err={err} w={25} repeatUrl={'/actividad2b'} nxtUrl={'/actividad2c'} />
+             <Modal visible={modalFlag} ok={ok} err={err} w={25} repeatUrl={'#/actividad2b'} nxtUrl={'#/actividad2c'} />
              <ICol><ButtonCheck onClick={checkActivity}  text={'CHECK'} /></ICol>
             </IRow>
         </Container>
