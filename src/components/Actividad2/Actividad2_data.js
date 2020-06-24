@@ -20,11 +20,11 @@ const data = [
             },
             {
               "text": "I have breakfast.",
-              "score": 1
+              "score": 0
             },
             {
               "text": "I wake up.",
-              "score": 0
+              "score": 1
             }
           ],
           "right": 0
