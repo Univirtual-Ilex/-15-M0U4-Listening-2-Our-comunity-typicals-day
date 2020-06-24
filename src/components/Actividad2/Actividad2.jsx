@@ -140,7 +140,7 @@ const Actividad2_base = ({staticContext, ...props}) => {
             <IRow pt={2} w={85} justify={'center'} className="columns" align={'center'} className="questions">
                 <ICol w={28} >
                     <IRow>
-                         <div className="title">{DataPerson.name}</div>
+                         <div className="title">UTP MEDICINE STUDENT</div>
                         <Area className={"persona1"} title={Data[0].name}/>
                         <AreaButtons className="audio" audio={DataPerson.audio_general}/>
                     </IRow>    

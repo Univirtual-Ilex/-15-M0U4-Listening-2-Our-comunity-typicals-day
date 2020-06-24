@@ -70,7 +70,7 @@ const data = [
               "score": 0
             },
             {
-              "text": "I drive touniversity again.",
+              "text": "I drive to university again.",
               "score": 1
             }
           ],
